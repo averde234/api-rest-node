@@ -1,0 +1,21 @@
+{
+  "name": "apifirebase",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "star": "node index.js",
+    "dev":"nodemon index.js"
+  },
+  "keywords": [],
+  "author": "ALE",
+  "license": "MIT",
+  "module": "type",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
