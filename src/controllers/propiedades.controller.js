@@ -1,6 +1,8 @@
 import * as Model from "../models/propiedades.js";
 
 
+// obtener todas las propiedades y filtrar por habitaciones 
+
 export const getAllPropiedades = async  (req, res) => {
     const { rooms } = req.query;
 
