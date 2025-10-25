@@ -7,7 +7,7 @@ import {
   updatePropiedades
 } from "../controllers/propiedades.controller.js";
 
-const router = Router(); // ✅ inicializa antes de usar
+const router = Router();
 
 router.get("/propiedades", getAllPropiedades);
 router.get("/propiedades/:id", getPropiedadesById);

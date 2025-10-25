@@ -23,6 +23,9 @@ export const getAllPropiedades = async  (req, res) => {
   }
 };
 
+
+// Obtener propiedad por ID
+
 export const getPropiedadesById = async (req, res) => {
   const id = req.params.id;
 
@@ -35,6 +38,8 @@ export const getPropiedadesById = async (req, res) => {
   res.json(homesid);
 };
 
+
+//Metodo POST para crear propiedad
 export const createPropiedades  = async (req, res) => {
     const  { titulo, ubicacion, precio, area, habitaciones, baños, descripcion } = req.body
     
@@ -43,6 +48,9 @@ export const createPropiedades  = async (req, res) => {
 
     res.status(201).json(propiedades);
 };
+
+
+// Borrar propiedad
 
 export const deletePropiedades = async (req, res) => {
   const { id } = req.params;
@@ -56,6 +64,9 @@ export const deletePropiedades = async (req, res) => {
 
   res.status(204).json({mensaje: "propiedad"});
 };
+
+
+//Actualizar propiedad
 
 export const updatePropiedades = async (req, res) => {
   const { id } = req.params;

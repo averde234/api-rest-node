@@ -28,13 +28,13 @@ Luego editar el archivo `.env` con los valores correspondientes para tu entorno.
 npm run dev
 ```
 
-# 🏠 Documentación de la API de Propiedades en Miami
+#  Documentación de la API de Propiedades en Miami
 
 Esta API permite consultar, filtrar, crear, actualizar y eliminar propiedades inmobiliarias en la ciudad de Miami.
 
 ---
 
-## 📍 Obtener todas las propiedades
+##  Obtener todas las propiedades
 
 **GET** `/api/propiedades`
 
@@ -120,3 +120,66 @@ Esta API permite consultar, filtrar, crear, actualizar y eliminar propiedades in
     }
 ]
   
+
+### Crear una propiedad
+
+- **POST** '/api/propiedad'
+- **Descripcion:** 
+- **Body (JSON):**
+
+```json
+{
+    "titulo": "Apartamento en Brickell City Center",
+    "ubicacion": "68 SE 6th St, Miami, FL 33131",
+    "precio": "$1,100,000",
+    "area": 112,
+    "habitaciones": 2,
+    "baños": 2,
+    "descripcion": "Moderno apartamento con acabados de lujo, cerca del centro financiero y tiendas exclusivas."
+}
+```
+
+- **Respuesta ejemplo:**
+
+
+```json
+{
+    "id": "zcrdCgZUnG4YZMphsNPd",
+    "titulo": "Apartamento en Brickell City Center",
+    "ubicacion": "68 SE 6th St, Miami, FL 33131",
+    "precio": "$1,100,000",
+    "area": 112,
+    "habitaciones": 2,
+    "baños": 2,
+    "descripcion": "Moderno apartamento con acabados de lujo, cerca del centro financiero y tiendas exclusivas."
+}
+```
+
+### Eliminar una propiedad
+
+- **DELETE** `/api/propiedad/:id`
+- **Descripcion:** Elimina una propiedad por su ID.
+- **Parametros:**
+ - `id` (path, requerido): ID de la propiedad a eliminar. 
+
+### Editar una propiedad
+
+- **patch** '/api/propiedad/:id'
+- **Descripcion:** Actualiza los campos de una propiedad existente. Solo se modifican los campos incluidos en el cuerpo de la petición.
+- **Parametros:**
+d (path, requerido): ID de la propiedad que se desea actualizar.
+
+- **Body (JSON):**
+
+```json
+{
+    "precio": "$790,000"
+  }```
+
+- **Respuesta:**
+
+```json
+
+{
+    "precio": "$790,000"
+  }```

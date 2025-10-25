@@ -11,6 +11,8 @@ import { db } from "./firebase.js";
 
 const propiedadesCollection = collection(db, "propiedades");
 
+
+//obtener todas las propiedades
 export const getAllPropiedades = async () => {
   try {
     const snapshot = await getDocs(propiedadesCollection);
@@ -23,6 +25,7 @@ export const getAllPropiedades = async () => {
   }
 };
 
+//Obtener propiedades por ID
 export const getPropiedadesById = async (id) => {
   try {
     const propiedadRef = doc(db, "propiedades", id);
@@ -34,6 +37,9 @@ export const getPropiedadesById = async (id) => {
   }
 };
 
+
+//Crear propiedad
+
 export const createPropiedades = async (data) => {
   try {
     const docRef = await addDoc(propiedadesCollection, data);
@@ -43,6 +49,8 @@ export const createPropiedades = async (data) => {
   }
 };
 
+
+//Borrar propiedad
 export const deletePropiedad = async (id) => {
   try {
     const propiedadRef = doc(db, "propiedades", id.trim());
@@ -60,6 +68,8 @@ export const deletePropiedad = async (id) => {
   }
 };
 
+
+// Actualizar propiedad
 export const updatePropiedad = async (id, propiedadData) => {
   try {
     const propiedadRef = doc(db, "propiedades", id.trim());
