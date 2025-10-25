@@ -97,7 +97,7 @@ Esta API permite consultar, filtrar, crear, actualizar y eliminar propiedades in
 ]
 
 
-  ### Obtener todos las propiedades
+  ### Obtener propiedades por numero de habitaciones
 
   - **GET** `/api/propiedades?rooms=numero-de-habitaciones`
   - **Descripcion:** Devuelve las propiedades cuyo numero de habitaciones sea las requeridas en la peticion/
