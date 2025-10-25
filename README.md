@@ -20,4 +20,4 @@ npm install
 cp .env-example .env
 ```
 
-Luego editar el archivo `.env` con los valores correspondientes para 
+Luego editar el archivo `.env` con los valores correspondientes par
