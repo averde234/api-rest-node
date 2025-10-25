@@ -118,5 +118,5 @@ Esta API permite consultar, filtrar, crear, actualizar y eliminar propiedades in
         "ubicacion": "68 SE 6th St, Miami, FL 33131",
         "area": "112"
     }
-]```
+]
   
